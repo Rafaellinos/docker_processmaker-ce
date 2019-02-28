@@ -3,7 +3,7 @@ FROM amazonlinux:2018.03
 CMD ["/bin/bash"]
 
 # Maintainer
-MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
+MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>, tmdoit <tm@digitaloak.it>
 
 # Extra
 LABEL version="3.3.4"
