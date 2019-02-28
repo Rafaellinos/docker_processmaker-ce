@@ -6,8 +6,8 @@ CMD ["/bin/bash"]
 MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>
 
 # Extra
-LABEL version="3.3.2"
-LABEL description="ProcessMaker 3.3.2 Docker Container."
+LABEL version="3.3.4"
+LABEL description="ProcessMaker 3.3.4 Docker Container."
 
 # Initial steps
 RUN yum clean all && yum install epel-release -y && yum update -y
@@ -29,9 +29,9 @@ RUN yum install \
   php71-mcrypt \
   -y
   
-# Download ProcessMaker Enterprise Edition
-RUN wget -O "/tmp/processmaker-3.3.2.tar.gz" \
-      "https://artifacts.processmaker.net/official/processmaker-3.3.2.tar.gz"
+# Download ProcessMaker OpenSource
+RUN wget -O "/tmp/processmaker-3.3.4.tar.gz" \
+      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.3.4/processmaker-3.3.4-community.tar.gz"
 	  
 # Copy configuration files
 COPY processmaker-fpm.conf /etc/php-fpm.d
