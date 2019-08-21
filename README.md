@@ -6,10 +6,10 @@ This is the ProcessMaker 3.3.10 Docker Image [Available at Docker Hub](https://h
 
 ### Run
 1. Get yml file: https://github.com/digitaloak/docker_processmaker-ce/blob/master/docker-compose.yml
-2. Change database password in file
+2. Change database password
 3. Change ENV URL address via which PM will be available ie. 33.22.11.44:8085 or my.example.com
 4. Run `docker-compose up -d`
-5. Browse ie. 33.22.11.44:8085, in database configuration, change IP address to 172.16.150.2 (if doesn't work, check MySQL instance IP address via `docker inpsect`
+5. Browse URL ie. 33.22.11.44:8085, in database configuration, change IP address to 172.16.150.2 (if doesn't work, check MySQL instance IP address via `docker inpsect`)
 
 #### Support & Discussion
 Please join: https://riot.digitaloak.it/#/room/#docker_processmaker-ce:digitaloak.it
