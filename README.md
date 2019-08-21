@@ -19,5 +19,8 @@ To avoid problem with 'blind' request to 'http://_/api/1.0/workflow/' when editi
 `mcedit /opt/processmaker/workflow/engine/src/ProcessMaker/Core/System.php`
 5. Set value for 'server_hostname_requests_frontend' to the domain name via which PM is available ie. 'mydomain.com'
 
+#### Support & Discussion
+Please join: https://riot.digitaloak.it/#/room/#docker_processmaker-ce:digitaloak.it
+
 ### Comments
 This image is based on enterprise edition, it's not battle tested, created by the newcomer.
