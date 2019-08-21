@@ -5,19 +5,11 @@ This is the ProcessMaker 3.3.10 Docker Image [Available at Docker Hub](https://h
 
 
 ### Run
-`docker-compose up -d`
-
-### After starting
-To avoid problem with 'blind' request to 'http://_/api/1.0/workflow/' when editing proces via designer you have to set value for 'server_hostname_requests_frontend' with your domain name.
-1. Get processmaker container name
-`docker ps`
-2. Enter into pm container
-`docker exec -ti <pm_name> bash`
-3. Install mc
-`yum install mc`
-4. Open System.php file
-`mcedit /opt/processmaker/workflow/engine/src/ProcessMaker/Core/System.php`
-5. Set value for 'server_hostname_requests_frontend' to the domain name via which PM is available ie. 'mydomain.com'
+1. Get yml file: https://github.com/digitaloak/docker_processmaker-ce/blob/master/docker-compose.yml
+2. Change database password in file
+3. Change ENV URL address via which PM will be available ie. 33.22.11.44:8085 or my.example.com
+4. Run `docker-compose up -d`
+5. Browse ie. 33.22.11.44:8085, in database configuration, change IP address to 172.16.150.2 (if doesn't work, check MySQL instance IP address via `docker inpsect`
 
 #### Support & Discussion
 Please join: https://riot.digitaloak.it/#/room/#docker_processmaker-ce:digitaloak.it
