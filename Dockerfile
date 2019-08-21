@@ -6,8 +6,12 @@ CMD ["/bin/bash"]
 MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>, tmdoit <tm@digitaloak.it>
 
 # Extra
-LABEL version="3.3.4"
-LABEL description="ProcessMaker 3.3.4 Docker Container."
+LABEL version="3.3.10"
+LABEL description="ProcessMaker 3.3.10 Docker Container."
+
+# Declare ARGS and ENV Variables
+ARG URL
+ENV URL $URL
 
 # Initial steps
 RUN yum clean all && yum install epel-release -y && yum update -y
@@ -16,6 +20,7 @@ RUN cp /etc/hosts ~/hosts.new && sed -i "/127.0.0.1/c\127.0.0.1 localhost localh
 # Required packages
 RUN yum install \
   wget \
+  vim \
   nano \
   sendmail \
   nginx \
@@ -30,8 +35,8 @@ RUN yum install \
   -y
   
 # Download ProcessMaker OpenSource
-RUN wget -O "/tmp/processmaker-3.3.4.tar.gz" \
-      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.3.4/processmaker-3.3.4-community.tar.gz"
+RUN wget -O "/tmp/processmaker-3.3.10.tar.gz" \
+      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.3.10/processmaker-3.3.10-community.tar.gz"
 	  
 # Copy configuration files
 COPY processmaker-fpm.conf /etc/php-fpm.d
