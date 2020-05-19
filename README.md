@@ -1,15 +1,14 @@
-# ProcessMaker Version 3.3.10
-This is the ProcessMaker 3.3.10 Docker Image [Available at Docker Hub](https://hub.docker.com/r/digitaloak/processmaker-ce)
-
-<img src="https://www.processmaker.com/assets/PartnerArea/new_logos/1431x348nb.png" height="51" width="198"/>
-
+# ProcessMaker Version 3.2.3
+This is the ProcessMaker 3.2.3 Docker Image
 
 ### Run
-1. Get yml file: https://github.com/digitaloak/docker_processmaker-ce/blob/master/docker-compose.yml
-2. Change database password
-3. Change ENV URL address via which PM will be available ie. 33.22.11.44:8085 or my.example.com
-4. Run `docker-compose up -d`
-5. Browse URL ie. 33.22.11.44:8085, in database configuration, change IP address to 172.16.150.2 (if doesn't work, check MySQL instance IP address via `docker inpsect`)
+docker-compose up -d
+docker exec -it dockerprocessmakerce_mysql_1 bash
+mysql -p # type password PM-DBPassw0rd
+USE wf_workflow;
+update USERS set USR_DUE_DATE = '2030-01-01' where USR_UID = '00000000000000000000000000000001';
+update RBAC_USERS set USR_DUE_DATE = '2030-01-01' where USR_UID = '00000000000000000000000000000001';
+127.0.0.1:8085
 
 #### Support & Discussion
 Please join: https://riot.digitaloak.it/#/room/#docker_processmaker-ce:digitaloak.it
