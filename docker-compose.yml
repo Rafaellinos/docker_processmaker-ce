@@ -24,8 +24,8 @@ services:
 networks:
   pm-net:
     driver: bridge
-    ipam:
-      driver: default
-      config:
-      -
-        subnet: 172.16.150.0/24
+    #ipam:
+            #driver: default
+      #config:
+              #-
+      #        subnet: 172.16.150.0/24

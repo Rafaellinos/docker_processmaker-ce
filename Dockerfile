@@ -6,8 +6,8 @@ CMD ["/bin/bash"]
 MAINTAINER ProcessMaker CloudOps <cloudops@processmaker.com>, tmdoit <tm@digitaloak.it>
 
 # Extra
-LABEL version="3.3.10"
-LABEL description="ProcessMaker 3.3.10 Docker Container."
+LABEL version="3.2.3"
+LABEL description="ProcessMaker 3.2.3 Docker Container."
 
 # Declare ARGS and ENV Variables
 ARG URL
@@ -35,8 +35,8 @@ RUN yum install \
   -y
   
 # Download ProcessMaker OpenSource
-RUN wget -O "/tmp/processmaker-3.3.10.tar.gz" \
-      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.3.10/processmaker-3.3.10-community.tar.gz"
+RUN wget -O "/tmp/processmaker-3.2.3.tar.gz" \
+      "https://sourceforge.net/projects/processmaker/files/ProcessMaker/3.2.3/processmaker-3.2.3-community.tar.gz"
 	  
 # Copy configuration files
 COPY processmaker-fpm.conf /etc/php-fpm.d
